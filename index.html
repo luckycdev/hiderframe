@@ -1,0 +1,30 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<h1>hiderframe</h1>
+<h2>it breaks if you're using iframes btw</h2>
+<iframe src="https://multidefine.vercel.app" style="width: 500px; height: 200px"></iframe>
+<script>
+    //hidden checker
+    $(window).blur(function(e) {
+        runhiderframe();
+    });
+    $(window).focus(function(e) {
+        var hiderframeelement = document.getElementById("hiderframe");
+        hiderframeelement.parentNode.removeChild(hiderframeelement);
+    });
+    //hiderframe
+    function runhiderframe() {
+        var hiderframe = document.createElement("iframe");
+            hiderframe.setAttribute("id","hiderframe");
+            hiderframe.setAttribute("src","https://example.com/");
+            hiderframe.setAttribute("style","z-index:2147483647;width: 100%; height: 100%; top:0px; left:0px; right:0px; bottom:0px; border:none; position:fixed; overflow:hidden;");
+            hiderframe.setAttribute("mozallowfullscreen","true");
+            hiderframe.setAttribute("allow","autoplay,autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr");
+            hiderframe.setAttribute("frameborder","0");
+            hiderframe.setAttribute("msallowfullscreen","true");
+            hiderframe.setAttribute("scrolling","yes");
+            hiderframe.setAttribute("allowfullscreen","true");
+            hiderframe.setAttribute("webkitallowfullscreen","true");
+            hiderframe.setAttribute("allowtransparency","true");
+        document.getElementsByTagName("body")[0].appendChild(hiderframe);
+    }
+</script>
