@@ -1,2 +1,2 @@
-Hide a site when you are not on it using jquery blur and focus
-Does not work if your site includes iframes
+* Hide a site when you are not on it using jquery blur and focus<br>
+    * Does not work if your site includes iframes
